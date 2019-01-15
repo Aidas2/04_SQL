@@ -1,0 +1,111 @@
+2018-10-17 09:45:40 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "Jonaitis" not found; SQL statement:
+INSERT INTO VYKDYTOJAI  (PAVARDE ,KVALIFIKACIJA ,KATEGORIJA ,ISSILAVINIMAS)
+VALUES
+("Jonaitis", "Informatikas", 2, "VU"),
+("Petraitis", "Statistikas", 3, "VU"),
+("Grazulyte", "Inzinierius", 1, NULL),
+("Onaityte", "Vadybininkas", 5, "VDU"),
+("Antanaitis", "Informatikas", 3, "VU") [42122-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:150)
+	at org.h2.command.dml.Insert.prepare(Insert.java:314)
+	at org.h2.command.Parser.prepareCommand(Parser.java:283)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.engine.Session.prepareCommand(Session.java:549)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:217)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:1077)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1386)
+	at org.h2.server.web.WebApp.query(WebApp.java:1060)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1022)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1009)
+	at org.h2.server.web.WebThread.process(WebThread.java:165)
+	at org.h2.server.web.WebThread.run(WebThread.java:90)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+2018-10-17 09:46:16 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "Jonaitis" not found; SQL statement:
+INSERT INTO VYKDYTOJAI  (PAVARDE ,KVALIFIKACIJA ,KATEGORIJA ,ISSILAVINIMAS)
+VALUES
+("Jonaitis", "Informatikas", 2, "VU"),
+("Petraitis", "Statistikas", 3, "VU"),
+("Grazulyte", "Inzinierius", 1, NULL),
+("Onaityte", "Vadybininkas", 5, "VDU"),
+("Antanaitis", "Informatikas", 3, "VU") [42122-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:150)
+	at org.h2.command.dml.Insert.prepare(Insert.java:314)
+	at org.h2.command.Parser.prepareCommand(Parser.java:283)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.engine.Session.prepareCommand(Session.java:549)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:217)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:1077)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1386)
+	at org.h2.server.web.WebApp.query(WebApp.java:1060)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1022)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1009)
+	at org.h2.server.web.WebThread.process(WebThread.java:165)
+	at org.h2.server.web.WebThread.run(WebThread.java:90)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+2018-10-17 09:48:03 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO VYKDYTOJAI  (PAVARDE ,KVALIFIKACIJA ,KATEGORIJA ,ISSILAVINIMAS)
+VALUES
+('Jonaitis', 'Informatikas', 2, 'VU'),
+('Petraitis', 'Statistikas', 3, 'VU'),
+('Grazulyte', 'Inzinierius', 1, NULL),
+('Onaityte, 'VADYBININKAS[*], 5, 'VDU'),
+('Antanaitis', 'Informatikas', 3, 'VU') "; expected "[, ::, *, /, %, +, -, ||, ~, !~, NOT, LIKE, ILIKE, REGEXP, IS, IN, BETWEEN, AND, OR, ,, )"; SQL statement:
+INSERT INTO VYKDYTOJAI  (PAVARDE ,KVALIFIKACIJA ,KATEGORIJA ,ISSILAVINIMAS)
+VALUES
+('Jonaitis', 'Informatikas', 2, 'VU'),
+('Petraitis', 'Statistikas', 3, 'VU'),
+('Grazulyte', 'Inzinierius', 1, NULL),
+('Onaityte, 'Vadybininkas, 5, 'VDU'),
+('Antanaitis', 'Informatikas', 3, 'VU') [42001-197]
+2018-10-17 09:48:26 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO VYKDYTOJAI  (PAVARDE ,KVALIFIKACIJA ,KATEGORIJA ,ISSILAVINIMAS)
+VALUES
+('Jonaitis', 'Informatikas', 2, 'VU'),
+('Petraitis', 'Statistikas', 3, 'VU'),
+('Grazulyte', 'Inzinierius', 1, NULL),
+('Onaityte', 'Vadybininkas, 5, 'VDU'),
+('Antanaitis', 'Informatikas', 3, 'VU[*]');"; SQL statement:
+INSERT INTO VYKDYTOJAI  (PAVARDE ,KVALIFIKACIJA ,KATEGORIJA ,ISSILAVINIMAS)
+VALUES
+('Jonaitis', 'Informatikas', 2, 'VU'),
+('Petraitis', 'Statistikas', 3, 'VU'),
+('Grazulyte', 'Inzinierius', 1, NULL),
+('Onaityte', 'Vadybininkas, 5, 'VDU'),
+('Antanaitis', 'Informatikas', 3, 'VU'); [42000-197]
+2018-10-17 09:51:31 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Unknown data type: "NR"; SQL statement:
+ALTER TABLE VYKDYTOJAI ALTER COLUMN NR Nr SMALLINT AUTO_INCREMENT [50004-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.command.Parser.parseColumnWithType(Parser.java:4400)
+	at org.h2.command.Parser.parseColumnForTable(Parser.java:4215)
+	at org.h2.command.Parser.parseAlterTableAlterColumnType(Parser.java:6296)
+	at org.h2.command.Parser.parseAlterTable(Parser.java:6265)
+	at org.h2.command.Parser.parseAlter(Parser.java:5373)
+	at org.h2.command.Parser.parsePrepared(Parser.java:362)
+	at org.h2.command.Parser.parse(Parser.java:335)
+	at org.h2.command.Parser.parse(Parser.java:307)
+	at org.h2.command.Parser.prepareCommand(Parser.java:278)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.engine.Session.prepareCommand(Session.java:549)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:217)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:1077)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1386)
+	at org.h2.server.web.WebApp.query(WebApp.java:1060)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1022)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1009)
+	at org.h2.server.web.WebThread.process(WebThread.java:165)
+	at org.h2.server.web.WebThread.run(WebThread.java:90)
+	at java.base/java.lang.Thread.run(Thread.java:844)

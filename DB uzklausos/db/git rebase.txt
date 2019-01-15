@@ -1,0 +1,129 @@
+aidas@aidas-VirtualBox:~$ cd Documents/db
+aidas@aidas-VirtualBox:~/Documents/db$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   darbuotojai.trace.db
+	modified:   northwind.mv.db
+	modified:   northwind.trace.db
+
+no changes added to commit (use "git add" and/or "git commit -a")
+aidas@aidas-VirtualBox:~/Documents/db$ git add .
+aidas@aidas-VirtualBox:~/Documents/db$ git commit -a
+[master 3fe43c2] duomenu bazes
+ 3 files changed, 404 insertions(+)
+aidas@aidas-VirtualBox:~/Documents/db$ git push
+Username for 'https://github.com': Aidas2
+Password for 'https://Aidas2@github.com': 
+To https://github.com/Aidas2/db.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/Aidas2/db.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+aidas@aidas-VirtualBox:~/Documents/db$ git rebase 
+First, rewinding head to replay your work on top of it...
+Applying: duomenu bazes
+aidas@aidas-VirtualBox:~/Documents/db$ git push
+Username for 'https://github.com': Aidas2
+Password for 'https://Aidas2@github.com': 
+To https://github.com/Aidas2/db.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/Aidas2/db.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+aidas@aidas-VirtualBox:~/Documents/db$ git pull --rebase
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Compressing objects: 100% (1/1), done.
+remote: Total 2 (delta 0), reused 2 (delta 0), pack-reused 0
+Unpacking objects: 100% (2/2), done.
+From https://github.com/Aidas2/db
+   889ddaa..e16ab21  master     -> origin/master
+First, rewinding head to replay your work on top of it...
+Applying: duomenu bazes
+Using index info to reconstruct a base tree...
+A	darbuotojai.trace.db
+A	northwind.mv.db
+A	northwind.trace.db
+.git/rebase-apply/patch:42: trailing whitespace.
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT COUNT(*) PROJEKTONUMERIS 
+.git/rebase-apply/patch:43: trailing whitespace.
+FROM DARBUOTOJAI 
+.git/rebase-apply/patch:45: trailing whitespace.
+SELECT COUNT(*) PROJEKTONUMERIS 
+.git/rebase-apply/patch:46: trailing whitespace.
+FROM DARBUOTOJAI 
+.git/rebase-apply/patch:50: trailing whitespace.
+SELECT COUNT(*) PROJEKTONUMERIS 
+warning: squelched 13 whitespace errors
+warning: 18 lines add whitespace errors.
+Falling back to patching base and 3-way merge...
+CONFLICT (modify/delete): northwind.trace.db deleted in HEAD and modified in duomenu bazes. Version duomenu bazes of northwind.trace.db left in tree.
+CONFLICT (modify/delete): northwind.mv.db deleted in HEAD and modified in duomenu bazes. Version duomenu bazes of northwind.mv.db left in tree.
+CONFLICT (modify/delete): darbuotojai.trace.db deleted in HEAD and modified in duomenu bazes. Version duomenu bazes of darbuotojai.trace.db left in tree.
+error: Failed to merge in the changes.
+Patch failed at 0001 duomenu bazes
+Use 'git am --show-current-patch' to see the failed patch
+
+Resolve all conflicts manually, mark them as resolved with
+"git add/rm <conflicted_files>", then run "git rebase --continue".
+You can instead skip this commit: run "git rebase --skip".
+To abort and get back to the state before "git rebase", run "git rebase --abort".
+
+aidas@aidas-VirtualBox:~/Documents/db$ git status
+rebase in progress; onto e16ab21
+You are currently rebasing branch 'master' on 'e16ab21'.
+  (fix conflicts and then run "git rebase --continue")
+  (use "git rebase --skip" to skip this patch)
+  (use "git rebase --abort" to check out the original branch)
+
+Unmerged paths:
+  (use "git reset HEAD <file>..." to unstage)
+  (use "git add/rm <file>..." as appropriate to mark resolution)
+
+	deleted by us:   darbuotojai.trace.db
+	deleted by us:   northwind.mv.db
+	deleted by us:   northwind.trace.db
+
+no changes added to commit (use "git add" and/or "git commit -a")
+aidas@aidas-VirtualBox:~/Documents/db$ git add darbuotojai.trace.db 
+aidas@aidas-VirtualBox:~/Documents/db$ git add northwind.mv.db 
+aidas@aidas-VirtualBox:~/Documents/db$ git add northwind.trace.db 
+aidas@aidas-VirtualBox:~/Documents/db$ git status
+rebase in progress; onto e16ab21
+You are currently rebasing branch 'master' on 'e16ab21'.
+  (all conflicts fixed: run "git rebase --continue")
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   darbuotojai.trace.db
+	new file:   northwind.mv.db
+	new file:   northwind.trace.db
+
+aidas@aidas-VirtualBox:~/Documents/db$ git rebase --continue
+Applying: duomenu bazes
+aidas@aidas-VirtualBox:~/Documents/db$ git push
+Username for 'https://github.com': Aidas2
+Password for 'https://Aidas2@github.com': 
+Counting objects: 5, done.
+Delta compression using up to 2 threads.
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 74.90 KiB | 4.68 MiB/s, done.
+Total 5 (delta 0), reused 0 (delta 0)
+remote: This repository moved. Please use the new location:
+remote:   https://github.com/Aidas2/03-DataBase.git
+To https://github.com/Aidas2/db.git
+   e16ab21..8ba52df  master -> master
+aidas@aidas-VirtualBox:~/Documents/db$ 
+

@@ -1,0 +1,98 @@
+2018-10-10 10:03:17 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "VARDAS[*] PAVARDE DIRBANUO"; expected "VALUES, {"; SQL statement:
+VARDAS PAVARDE DIRBANUO [42001-197]
+2018-10-10 10:12:13 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT VARDAS PAVARDE GIMIMOMETAI[*] FROM DARBUOTOJAI"; SQL statement:
+SELECT VARDAS PAVARDE GIMIMOMETAI FROM DARBUOTOJAI [42000-197]
+2018-10-10 10:49:23 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "UPDATE DARBUOTOJAI SET PROJEKTONUMERIS=3 
+WHERE VARDAS='Pabandukas',[*] PAVARDE ='Pabandaitis'"; SQL statement:
+UPDATE DARBUOTOJAI SET PROJEKTONUMERIS=3 
+WHERE VARDAS='Pabandukas', PAVARDE ='Pabandaitis' [42000-197]
+2018-10-10 10:50:35 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "UPDATE DARBUOTOJAI SET PROJEKTONUMERIS=3 
+WHERE VARDAS='Pabandukas' PAVARDE[*] ='Pabandaitis'"; SQL statement:
+UPDATE DARBUOTOJAI SET PROJEKTONUMERIS=3 
+WHERE VARDAS='Pabandukas' PAVARDE ='Pabandaitis' [42000-197]
+2018-10-10 10:51:49 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "UPDATE DARBUOTOJAI 
+SET PROJEKTONUMERIS=9 
+WHERE VARDAS='Pabandukas' PAVARDE[*]='Pabandaitis'"; SQL statement:
+UPDATE DARBUOTOJAI 
+SET PROJEKTONUMERIS=9 
+WHERE VARDAS='Pabandukas' PAVARDE='Pabandaitis' [42000-197]
+2018-10-10 10:52:52 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT * DARBUOTOJAI[*]"; SQL statement:
+SELECT * DARBUOTOJAI [42000-197]
+2018-10-10 10:56:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "DELETE FROM DARBUOTOJAI 
+WHERE VARDAS = 'Pabandukas'
+AND PAVARDE = [*]""Pabandaitis';"; SQL statement:
+DELETE FROM DARBUOTOJAI 
+WHERE VARDAS = 'Pabandukas'
+AND PAVARDE = "Pabandaitis'; [42000-197]
+2018-10-11 09:17:07 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Cannot parse "DATE" constant "1980"; SQL statement:
+SELECT * FROM DARBUOTOJAI WHERE GIMIMOMETAI BETWEEN 1980 AND 1990 [22007-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:168)
+	at org.h2.value.ValueDate.parse(ValueDate.java:74)
+	at org.h2.value.Value.convertTo(Value.java:1069)
+	at org.h2.expression.Comparison.optimize(Comparison.java:204)
+	at org.h2.expression.ConditionAndOr.optimize(ConditionAndOr.java:130)
+	at org.h2.command.dml.Select.prepare(Select.java:861)
+	at org.h2.command.Parser.prepareCommand(Parser.java:283)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.engine.Session.prepareCommand(Session.java:549)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:217)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:1077)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1386)
+	at org.h2.server.web.WebApp.query(WebApp.java:1060)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1022)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1009)
+	at org.h2.server.web.WebThread.process(WebThread.java:165)
+	at org.h2.server.web.WebThread.run(WebThread.java:90)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+Caused by: java.lang.IllegalArgumentException: 1980
+	at org.h2.util.DateTimeUtils.parseDateValue(DateTimeUtils.java:345)
+	at org.h2.value.ValueDate.parse(ValueDate.java:72)
+	... 17 more
+2018-10-11 09:50:44 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT * FROM DARBUOTOJAI
+WHERE VARDAS ILIKE [*]""__S%'"; SQL statement:
+SELECT * FROM DARBUOTOJAI
+WHERE VARDAS ILIKE "__S%' [42000-197]
+2018-10-11 10:07:51 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT COUNT(*) PROJEKTONUMERIS 
+FROM DARBUOTOJAI 
+GROUP BYPROJEKTONUMERIS[*]"; expected "BY"; SQL statement:
+SELECT COUNT(*) PROJEKTONUMERIS 
+FROM DARBUOTOJAI 
+GROUP BYPROJEKTONUMERIS [42001-197]
+2018-10-11 10:07:59 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Invalid use of aggregate function "COUNT(*)"; SQL statement:
+SELECT COUNT(*) PROJEKTONUMERIS 
+FROM DARBUOTOJAI 
+GROUP BY PROJEKTONUMERIS [90054-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.Aggregate.getValue(Aggregate.java:368)
+	at org.h2.expression.Alias.getValue(Alias.java:36)
+	at org.h2.command.dml.Select.queryGroup(Select.java:336)
+	at org.h2.command.dml.Select.queryWithoutCache(Select.java:628)
+	at org.h2.command.dml.Query.queryWithoutCacheLazyCheck(Query.java:114)
+	at org.h2.command.dml.Query.query(Query.java:371)
+	at org.h2.command.dml.Query.query(Query.java:333)
+	at org.h2.command.CommandContainer.query(CommandContainer.java:114)
+	at org.h2.command.Command.executeQuery(Command.java:202)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:227)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:1077)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1386)
+	at org.h2.server.web.WebApp.query(WebApp.java:1060)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1022)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1009)
+	at org.h2.server.web.WebThread.process(WebThread.java:165)
+	at org.h2.server.web.WebThread.run(WebThread.java:90)
+	at java.base/java.lang.Thread.run(Thread.java:844)

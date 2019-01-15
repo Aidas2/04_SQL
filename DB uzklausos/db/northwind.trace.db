@@ -1,0 +1,472 @@
+2018-10-10 11:29:06 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO EMPLOYEES (EMPLOYEEID ,LASTNAME ,FIRSTNAME ,TITLE ,TITLEOFCOURTESY ,BIRTHDATE ,HIREDATE ,ADDRESS ,CITY ,REGION ,POSTALCODE ,COUNTRY ,HOMEPHONE ,EXTENSION ,NOTES ,REPORTSTO ,PHOTOPATH ) VALUES (0652, AIDAS, PUPELIS, MR, PROGRAMMER, 1976-05-23, 2019-01-01, KARALIAUCIAUS 1[*]A-35, VILNIUS, AUKSTAITIJA, 0621, LITHUANIA, +370-647-26286, GERAS, SUPERGERAS, LABAAAI. LIUKS) "; expected "., (, [, ::, *, /, %, +, -, ||, ~, !~, NOT, LIKE, ILIKE, REGEXP, IS, IN, BETWEEN, AND, OR, ,, )"; SQL statement:
+INSERT INTO EMPLOYEES (EMPLOYEEID ,LASTNAME ,FIRSTNAME ,TITLE ,TITLEOFCOURTESY ,BIRTHDATE ,HIREDATE ,ADDRESS ,CITY ,REGION ,POSTALCODE ,COUNTRY ,HOMEPHONE ,EXTENSION ,NOTES ,REPORTSTO ,PHOTOPATH ) VALUES (0652, Aidas, Pupelis, Mr, Programmer, 1976-05-23, 2019-01-01, Karaliauciaus 1A-35, Vilnius, Aukstaitija, 0621, Lithuania, +370-647-26286, geras, supergeras, labaaai. liuks) [42001-197]
+2018-10-10 11:31:23 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column count does not match; SQL statement:
+INSERT INTO EMPLOYEES (EMPLOYEEID ,LASTNAME ,FIRSTNAME ,TITLE ,TITLEOFCOURTESY ,BIRTHDATE ,HIREDATE ,ADDRESS ,CITY ,REGION ,POSTALCODE ,COUNTRY ,HOMEPHONE ,EXTENSION ,NOTES ,REPORTSTO ,PHOTOPATH ) VALUES ('0652', 'Aidas, Pupelis', 'Mr', 'Programmer', '1976-05-23', '2019-01-01', 'Karaliauciaus 1A-35', 'Vilnius', 'Aukstaitija', '0621', 'Lithuania', '+370-647-26286', 'geras', 'supergeras', 'labaaai', 'liuks') [21002-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.message.DbException.get(DbException.java:144)
+	at org.h2.command.dml.Insert.prepare(Insert.java:306)
+	at org.h2.command.Parser.prepareCommand(Parser.java:283)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.engine.Session.prepareCommand(Session.java:549)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:217)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:1077)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1386)
+	at org.h2.server.web.WebApp.query(WebApp.java:1060)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1022)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1009)
+	at org.h2.server.web.WebThread.process(WebThread.java:165)
+	at org.h2.server.web.WebThread.run(WebThread.java:90)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+2018-10-10 11:31:54 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO EMPLOYEES (EMPLOYEEID ,LASTNAME ,FIRSTNAME ,TITLE ,TITLEOFCOURTESY ,BIRTHDATE ,HIREDATE ,ADDRESS ,CITY ,REGION ,POSTALCODE ,COUNTRY ,HOMEPHONE ,EXTENSION ,NOTES ,REPORTSTO ,PHOTOPATH ) VALUES ('0652', 'Aidas, 'Pupelis', 'Mr', 'Programmer', '1976-05-23', '2019-01-01', 'Karaliauciaus 1A-35', 'Vilnius', 'Aukstaitija', '0621', 'Lithuania', '+370-647-26286', 'geras', 'supergeras', 'labaaai', 'liuks[*]')"; SQL statement:
+INSERT INTO EMPLOYEES (EMPLOYEEID ,LASTNAME ,FIRSTNAME ,TITLE ,TITLEOFCOURTESY ,BIRTHDATE ,HIREDATE ,ADDRESS ,CITY ,REGION ,POSTALCODE ,COUNTRY ,HOMEPHONE ,EXTENSION ,NOTES ,REPORTSTO ,PHOTOPATH ) VALUES ('0652', 'Aidas, 'Pupelis', 'Mr', 'Programmer', '1976-05-23', '2019-01-01', 'Karaliauciaus 1A-35', 'Vilnius', 'Aukstaitija', '0621', 'Lithuania', '+370-647-26286', 'geras', 'supergeras', 'labaaai', 'liuks') [42000-197]
+2018-10-10 11:34:24 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO EMPLOYEES (EMPLOYEEID ,LASTNAME ,FIRSTNAME ,TITLE ,TITLEOFCOURTESY ,BIRTHDATE ,HIREDATE ,ADDRESS ,CITY ,REGION ,POSTALCODE ,COUNTRY ,HOMEPHONE ,EXTENSION ,NOTES ,REPORTSTO ,PHOTOPATH ) VALUES (0652, 'Aidas, 'Pupelis', 'Mr', 'Programmer', '1976-05-23', '2019-01-01', 'Karaliauciaus 1A-35', 'Vilnius', 'Aukstaitija', '0621', 'Lithuania', '+370-647-26286', 'geras', 'supergeras', 12345, 'liuks[*]')"; SQL statement:
+INSERT INTO EMPLOYEES (EMPLOYEEID ,LASTNAME ,FIRSTNAME ,TITLE ,TITLEOFCOURTESY ,BIRTHDATE ,HIREDATE ,ADDRESS ,CITY ,REGION ,POSTALCODE ,COUNTRY ,HOMEPHONE ,EXTENSION ,NOTES ,REPORTSTO ,PHOTOPATH ) VALUES (0652, 'Aidas, 'Pupelis', 'Mr', 'Programmer', '1976-05-23', '2019-01-01', 'Karaliauciaus 1A-35', 'Vilnius', 'Aukstaitija', '0621', 'Lithuania', '+370-647-26286', 'geras', 'supergeras', 12345, 'liuks') [42000-197]
+2018-10-10 11:34:29 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO EMPLOYEES (EMPLOYEEID ,LASTNAME ,FIRSTNAME ,TITLE ,TITLEOFCOURTESY ,BIRTHDATE ,HIREDATE ,ADDRESS ,CITY ,REGION ,POSTALCODE ,COUNTRY ,HOMEPHONE ,EXTENSION ,NOTES ,REPORTSTO ,PHOTOPATH ) VALUES (0652, 'Aidas, 'Pupelis', 'Mr', 'Programmer', '1976-05-23', '2019-01-01', 'Karaliauciaus 1A-35', 'Vilnius', 'Aukstaitija', '0621', 'Lithuania', '+370-647-26286', 'geras', 'supergeras', 12345, 'liuks[*]')"; SQL statement:
+INSERT INTO EMPLOYEES (EMPLOYEEID ,LASTNAME ,FIRSTNAME ,TITLE ,TITLEOFCOURTESY ,BIRTHDATE ,HIREDATE ,ADDRESS ,CITY ,REGION ,POSTALCODE ,COUNTRY ,HOMEPHONE ,EXTENSION ,NOTES ,REPORTSTO ,PHOTOPATH ) VALUES (0652, 'Aidas, 'Pupelis', 'Mr', 'Programmer', '1976-05-23', '2019-01-01', 'Karaliauciaus 1A-35', 'Vilnius', 'Aukstaitija', '0621', 'Lithuania', '+370-647-26286', 'geras', 'supergeras', 12345, 'liuks') [42000-197]
+2018-10-10 11:34:31 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO EMPLOYEES (EMPLOYEEID ,LASTNAME ,FIRSTNAME ,TITLE ,TITLEOFCOURTESY ,BIRTHDATE ,HIREDATE ,ADDRESS ,CITY ,REGION ,POSTALCODE ,COUNTRY ,HOMEPHONE ,EXTENSION ,NOTES ,REPORTSTO ,PHOTOPATH ) VALUES (0652, 'Aidas, 'Pupelis', 'Mr', 'Programmer', '1976-05-23', '2019-01-01', 'Karaliauciaus 1A-35', 'Vilnius', 'Aukstaitija', '0621', 'Lithuania', '+370-647-26286', 'geras', 'supergeras', 12345, 'liuks[*]')"; SQL statement:
+INSERT INTO EMPLOYEES (EMPLOYEEID ,LASTNAME ,FIRSTNAME ,TITLE ,TITLEOFCOURTESY ,BIRTHDATE ,HIREDATE ,ADDRESS ,CITY ,REGION ,POSTALCODE ,COUNTRY ,HOMEPHONE ,EXTENSION ,NOTES ,REPORTSTO ,PHOTOPATH ) VALUES (0652, 'Aidas, 'Pupelis', 'Mr', 'Programmer', '1976-05-23', '2019-01-01', 'Karaliauciaus 1A-35', 'Vilnius', 'Aukstaitija', '0621', 'Lithuania', '+370-647-26286', 'geras', 'supergeras', 12345, 'liuks') [42000-197]
+2018-10-10 11:34:33 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO EMPLOYEES (EMPLOYEEID ,LASTNAME ,FIRSTNAME ,TITLE ,TITLEOFCOURTESY ,BIRTHDATE ,HIREDATE ,ADDRESS ,CITY ,REGION ,POSTALCODE ,COUNTRY ,HOMEPHONE ,EXTENSION ,NOTES ,REPORTSTO ,PHOTOPATH ) VALUES (0652, 'Aidas, 'Pupelis', 'Mr', 'Programmer', '1976-05-23', '2019-01-01', 'Karaliauciaus 1A-35', 'Vilnius', 'Aukstaitija', '0621', 'Lithuania', '+370-647-26286', 'geras', 'supergeras', 12345, 'liuks[*]')"; SQL statement:
+INSERT INTO EMPLOYEES (EMPLOYEEID ,LASTNAME ,FIRSTNAME ,TITLE ,TITLEOFCOURTESY ,BIRTHDATE ,HIREDATE ,ADDRESS ,CITY ,REGION ,POSTALCODE ,COUNTRY ,HOMEPHONE ,EXTENSION ,NOTES ,REPORTSTO ,PHOTOPATH ) VALUES (0652, 'Aidas, 'Pupelis', 'Mr', 'Programmer', '1976-05-23', '2019-01-01', 'Karaliauciaus 1A-35', 'Vilnius', 'Aukstaitija', '0621', 'Lithuania', '+370-647-26286', 'geras', 'supergeras', 12345, 'liuks') [42000-197]
+2018-10-10 11:34:44 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "EXTENSION VARCHAR(4)": "'geras' (5)"; SQL statement:
+INSERT INTO EMPLOYEES (EMPLOYEEID ,LASTNAME ,FIRSTNAME ,TITLE ,TITLEOFCOURTESY ,BIRTHDATE ,HIREDATE ,ADDRESS ,CITY ,REGION ,POSTALCODE ,COUNTRY ,HOMEPHONE ,EXTENSION ,NOTES ,REPORTSTO ,PHOTOPATH ) VALUES (0652, 'Aidas', 'Pupelis', 'Mr', 'Programmer', '1976-05-23', '2019-01-01', 'Karaliauciaus 1A-35', 'Vilnius', 'Aukstaitija', '0621', 'Lithuania', '+370-647-26286', 'geras', 'supergeras', 12345, 'liuks') [22001-197]
+2018-10-10 11:35:04 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "EXTENSION VARCHAR(4)": "'geras' (5)"; SQL statement:
+INSERT INTO EMPLOYEES (EMPLOYEEID ,LASTNAME ,FIRSTNAME ,TITLE ,TITLEOFCOURTESY ,BIRTHDATE ,HIREDATE ,ADDRESS ,CITY ,REGION ,POSTALCODE ,COUNTRY ,HOMEPHONE ,EXTENSION ,NOTES ,REPORTSTO ,PHOTOPATH ) VALUES (0652, 'Aidas', 'Pupelis', 'Mr', 'Programmer', '1976-05-23', '2019-01-01', 'Karaliauciaus 1A-35', 'Vilnius', 'Aukstaitija', '0621', 'Lithuania', '+370-647-26286', 'geras', 'supergeras', 12, 'liuks') [22001-197]
+2018-10-10 11:36:06 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT * EMPLOYEES[*]"; SQL statement:
+SELECT * EMPLOYEES [42000-197]
+2018-10-10 11:40:03 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT * EMPLOYEES[*]"; SQL statement:
+SELECT * EMPLOYEES [42000-197]
+2018-10-10 11:46:02 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "EXTENSION VARCHAR(4)": "'kazkas' (6)"; SQL statement:
+UPDATE EMPLOYEES SET TITLE ='Professor', TITLEOFCOURTESY ='Mr.', BIRTHDATE ='1958-06-14', HIREDATE ='2014-04-22', ADDRESS ='Vyduno 27-27', CITY ='Vilnius', REGION ='Aukstaitija', POSTALCODE ='0514', COUNTRY ='Lithuania', HOMEPHONE ='+37065220732', EXTENSION ='kazkas', NOTES ='smart', REPORTSTO ='22', PHOTOPATH ='bumbum' [22001-197]
+2018-10-10 11:54:10 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "UPDATE EMPLOYEES SET TITLE ='Professor', TITLEOFCOURTESY ='Mr.', BIRTHDATE ='1958-06-14', HIREDATE ='2014-04-22', ADDRESS ='Vyduno 27-27', CITY ='Vilnius', REGION ='Aukstaitija', POSTALCODE ='0514', COUNTRY ='Lithuania', HOMEPHONE ='+37065220732', EXTENSION ='kas', NOTES ='smart', REPORTSTO ='22', PHOTOPATH ='bumbum'
+       WHERE FIRSTNAME ='Petras' AND LASTNAME =[*]""Petraitis'"; SQL statement:
+UPDATE EMPLOYEES SET TITLE ='Professor', TITLEOFCOURTESY ='Mr.', BIRTHDATE ='1958-06-14', HIREDATE ='2014-04-22', ADDRESS ='Vyduno 27-27', CITY ='Vilnius', REGION ='Aukstaitija', POSTALCODE ='0514', COUNTRY ='Lithuania', HOMEPHONE ='+37065220732', EXTENSION ='kas', NOTES ='smart', REPORTSTO ='22', PHOTOPATH ='bumbum'
+       WHERE FIRSTNAME ='Petras' AND LASTNAME ="Petraitis' [42000-197]
+2018-10-10 12:01:54 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT * FROM EMPLOYEES 
+INSERT INTO[*] EMPLOYEES (EMPLOYEEID, LASTNAME ) VALUES ('01', 'Antanaitis'), ('02', 'Antanaitis')"; SQL statement:
+SELECT * FROM EMPLOYEES 
+INSERT INTO EMPLOYEES (EMPLOYEEID, LASTNAME ) VALUES ('01', 'Antanaitis'), ('02', 'Antanaitis') [42000-197]
+2018-10-11 10:33:32 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT CONTACTNAME ,COMPANYNAME ,CUSTOMERID FROM CUSTOMERS WHERE CITY IN 'Ma%'[*]"; expected "("; SQL statement:
+SELECT CONTACTNAME ,COMPANYNAME ,CUSTOMERID FROM CUSTOMERS WHERE CITY IN 'Ma%' [42001-197]
+2018-10-11 10:56:44 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT FIRSTNAME FROM EMPLOYEES WHERE FIRSTNAME <> LIKE[*] 'M%'"; expected "ALL, ANY, SOME, SELECT, FROM, WITH"; SQL statement:
+SELECT FIRSTNAME FROM EMPLOYEES WHERE FIRSTNAME <> LIKE 'M%' [42001-197]
+2018-10-11 10:56:57 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT FIRSTNAME FROM EMPLOYEES WHERE FIRSTNAME LIKE <>[*] 'M%'"; SQL statement:
+SELECT FIRSTNAME FROM EMPLOYEES WHERE FIRSTNAME LIKE <> 'M%' [42000-197]
+2018-10-11 11:07:41 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT BIRTHDATE FROM EMPLOYEES MAX()[*]"; expected "identifier"; SQL statement:
+SELECT BIRTHDATE FROM EMPLOYEES MAX() [42001-197]
+2018-10-11 11:07:57 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT BIRTHDATE FROM EMPLOYEES WHERE BIRTHDATE MAX[*]()"; SQL statement:
+SELECT BIRTHDATE FROM EMPLOYEES WHERE BIRTHDATE MAX() [42000-197]
+2018-10-11 11:11:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column count does not match; SQL statement:
+SELECT CITY FROM CUSTOMERS COUNT(CONTACTNAME ) [21002-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.message.DbException.get(DbException.java:144)
+	at org.h2.table.TableFilter.setDerivedColumns(TableFilter.java:1077)
+	at org.h2.command.Parser.readTableFilter(Parser.java:1461)
+	at org.h2.command.Parser.parseSelectSimpleFromPart(Parser.java:2138)
+	at org.h2.command.Parser.parseSelectSimple(Parser.java:2287)
+	at org.h2.command.Parser.parseSelectSub(Parser.java:2133)
+	at org.h2.command.Parser.parseSelectUnion(Parser.java:1946)
+	at org.h2.command.Parser.parseSelect(Parser.java:1919)
+	at org.h2.command.Parser.parsePrepared(Parser.java:463)
+	at org.h2.command.Parser.parse(Parser.java:335)
+	at org.h2.command.Parser.parse(Parser.java:307)
+	at org.h2.command.Parser.prepareCommand(Parser.java:278)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.engine.Session.prepareCommand(Session.java:549)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:217)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:1077)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1386)
+	at org.h2.server.web.WebApp.query(WebApp.java:1060)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1022)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1009)
+	at org.h2.server.web.WebThread.process(WebThread.java:165)
+	at org.h2.server.web.WebThread.run(WebThread.java:90)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+2018-10-11 11:11:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column count does not match; SQL statement:
+SELECT CITY FROM CUSTOMERS COUNT(CUSTOMERID  ) [21002-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.message.DbException.get(DbException.java:144)
+	at org.h2.table.TableFilter.setDerivedColumns(TableFilter.java:1077)
+	at org.h2.command.Parser.readTableFilter(Parser.java:1461)
+	at org.h2.command.Parser.parseSelectSimpleFromPart(Parser.java:2138)
+	at org.h2.command.Parser.parseSelectSimple(Parser.java:2287)
+	at org.h2.command.Parser.parseSelectSub(Parser.java:2133)
+	at org.h2.command.Parser.parseSelectUnion(Parser.java:1946)
+	at org.h2.command.Parser.parseSelect(Parser.java:1919)
+	at org.h2.command.Parser.parsePrepared(Parser.java:463)
+	at org.h2.command.Parser.parse(Parser.java:335)
+	at org.h2.command.Parser.parse(Parser.java:307)
+	at org.h2.command.Parser.prepareCommand(Parser.java:278)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.engine.Session.prepareCommand(Session.java:549)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:217)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:1077)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1386)
+	at org.h2.server.web.WebApp.query(WebApp.java:1060)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1022)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1009)
+	at org.h2.server.web.WebThread.process(WebThread.java:165)
+	at org.h2.server.web.WebThread.run(WebThread.java:90)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+2018-10-11 11:12:41 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "CITY" must be in the GROUP BY list; SQL statement:
+SELECT CITY, COUNT(CUSTOMERID ) FROM CUSTOMERS [90016-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.updateAggregate(ExpressionColumn.java:172)
+	at org.h2.command.dml.Select.queryGroup(Select.java:350)
+	at org.h2.command.dml.Select.queryWithoutCache(Select.java:628)
+	at org.h2.command.dml.Query.queryWithoutCacheLazyCheck(Query.java:114)
+	at org.h2.command.dml.Query.query(Query.java:371)
+	at org.h2.command.dml.Query.query(Query.java:333)
+	at org.h2.command.CommandContainer.query(CommandContainer.java:114)
+	at org.h2.command.Command.executeQuery(Command.java:202)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:227)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:1077)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1386)
+	at org.h2.server.web.WebApp.query(WebApp.java:1060)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1022)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1009)
+	at org.h2.server.web.WebThread.process(WebThread.java:165)
+	at org.h2.server.web.WebThread.run(WebThread.java:90)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+2018-10-11 11:16:01 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "CITY" must be in the GROUP BY list; SQL statement:
+SELECT CITY, COUNT(CUSTOMERID) FROM CUSTOMERS [90016-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.updateAggregate(ExpressionColumn.java:172)
+	at org.h2.command.dml.Select.queryGroup(Select.java:350)
+	at org.h2.command.dml.Select.queryWithoutCache(Select.java:628)
+	at org.h2.command.dml.Query.queryWithoutCacheLazyCheck(Query.java:114)
+	at org.h2.command.dml.Query.query(Query.java:371)
+	at org.h2.command.dml.Query.query(Query.java:333)
+	at org.h2.command.CommandContainer.query(CommandContainer.java:114)
+	at org.h2.command.Command.executeQuery(Command.java:202)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:227)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:1077)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1386)
+	at org.h2.server.web.WebApp.query(WebApp.java:1060)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1022)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1009)
+	at org.h2.server.web.WebThread.process(WebThread.java:165)
+	at org.h2.server.web.WebThread.run(WebThread.java:90)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+2018-10-11 11:25:03 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT CITY , CONTACTTITLE , COUNT(CONTACTTITLE ) FROM CUSTOMERS ORDERED BY[*] CITY"; SQL statement:
+SELECT CITY , CONTACTTITLE , COUNT(CONTACTTITLE ) FROM CUSTOMERS ORDERED BY CITY [42000-197]
+2018-10-11 11:26:16 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT CITY , CONTACTTITLE , COUNT(CONTACTTITLE ) FROM CUSTOMERS ORDERED BY[*] CITY"; SQL statement:
+SELECT CITY , CONTACTTITLE , COUNT(CONTACTTITLE ) FROM CUSTOMERS ORDERED BY CITY [42000-197]
+2018-10-11 11:26:40 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "CONTACTTITLE" must be in the GROUP BY list; SQL statement:
+SELECT CITY , CONTACTTITLE , COUNT(CONTACTTITLE ) FROM CUSTOMERS GROUP BY CITY [90016-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.updateAggregate(ExpressionColumn.java:172)
+	at org.h2.command.dml.Select.queryGroup(Select.java:350)
+	at org.h2.command.dml.Select.queryWithoutCache(Select.java:628)
+	at org.h2.command.dml.Query.queryWithoutCacheLazyCheck(Query.java:114)
+	at org.h2.command.dml.Query.query(Query.java:371)
+	at org.h2.command.dml.Query.query(Query.java:333)
+	at org.h2.command.CommandContainer.query(CommandContainer.java:114)
+	at org.h2.command.Command.executeQuery(Command.java:202)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:227)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:1077)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1386)
+	at org.h2.server.web.WebApp.query(WebApp.java:1060)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1022)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1009)
+	at org.h2.server.web.WebThread.process(WebThread.java:165)
+	at org.h2.server.web.WebThread.run(WebThread.java:90)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+2018-10-11 11:32:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "CITY" must be in the GROUP BY list; SQL statement:
+SELECT CITY , CONTACTTITLE , COUNT(CONTACTTITLE ) FROM CUSTOMERS WHERE CONTACTTITLE ='Accounting Manager' [90016-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.updateAggregate(ExpressionColumn.java:172)
+	at org.h2.command.dml.Select.queryGroup(Select.java:350)
+	at org.h2.command.dml.Select.queryWithoutCache(Select.java:628)
+	at org.h2.command.dml.Query.queryWithoutCacheLazyCheck(Query.java:114)
+	at org.h2.command.dml.Query.query(Query.java:371)
+	at org.h2.command.dml.Query.query(Query.java:333)
+	at org.h2.command.CommandContainer.query(CommandContainer.java:114)
+	at org.h2.command.Command.executeQuery(Command.java:202)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:227)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:1077)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1386)
+	at org.h2.server.web.WebApp.query(WebApp.java:1060)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1022)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1009)
+	at org.h2.server.web.WebThread.process(WebThread.java:165)
+	at org.h2.server.web.WebThread.run(WebThread.java:90)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+2018-10-11 11:33:06 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "CONTACTTITLE" must be in the GROUP BY list; SQL statement:
+SELECT CITY , CONTACTTITLE , COUNT(CONTACTTITLE ) FROM CUSTOMERS GROUP BY CITY [90016-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.updateAggregate(ExpressionColumn.java:172)
+	at org.h2.command.dml.Select.queryGroup(Select.java:350)
+	at org.h2.command.dml.Select.queryWithoutCache(Select.java:628)
+	at org.h2.command.dml.Query.queryWithoutCacheLazyCheck(Query.java:114)
+	at org.h2.command.dml.Query.query(Query.java:371)
+	at org.h2.command.dml.Query.query(Query.java:333)
+	at org.h2.command.CommandContainer.query(CommandContainer.java:114)
+	at org.h2.command.Command.executeQuery(Command.java:202)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:227)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:1077)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1386)
+	at org.h2.server.web.WebApp.query(WebApp.java:1060)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1022)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1009)
+	at org.h2.server.web.WebThread.process(WebThread.java:165)
+	at org.h2.server.web.WebThread.run(WebThread.java:90)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+2018-10-11 11:50:20 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "1.[*] SELECT ORDERID,
+SUM(UNITPRICE*QUANTITY) AS INCOME,
+SUM(UNITPRICE*QUANTITY*(1-DISCOUNT)) AS ""INCOME WITH DISCOUNT""
+FROM ORDER_DETAILS
+GROUP BY ORDERID"; SQL statement:
+1. SELECT ORDERID,
+SUM(UNITPRICE*QUANTITY) AS INCOME,
+SUM(UNITPRICE*QUANTITY*(1-DISCOUNT)) AS "INCOME WITH DISCOUNT"
+FROM ORDER_DETAILS
+GROUP BY ORDERID [42000-197]
+2018-10-11 11:50:35 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "1.[*] SELECT ORDERID
+SUM(UNITPRICE*QUANTITY) AS INCOME
+SUM(UNITPRICE*QUANTITY*(1-DISCOUNT)) AS ""INCOME WITH DISCOUNT""
+FROM ORDER_DETAILS
+GROUP BY ORDERID"; SQL statement:
+1. SELECT ORDERID
+SUM(UNITPRICE*QUANTITY) AS INCOME
+SUM(UNITPRICE*QUANTITY*(1-DISCOUNT)) AS "INCOME WITH DISCOUNT"
+FROM ORDER_DETAILS
+GROUP BY ORDERID [42000-197]
+2018-10-11 11:50:36 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "1.[*] SELECT ORDERID
+SUM(UNITPRICE*QUANTITY) AS INCOME
+SUM(UNITPRICE*QUANTITY*(1-DISCOUNT)) AS ""INCOME WITH DISCOUNT""
+FROM ORDER_DETAILS
+GROUP BY ORDERID"; SQL statement:
+1. SELECT ORDERID
+SUM(UNITPRICE*QUANTITY) AS INCOME
+SUM(UNITPRICE*QUANTITY*(1-DISCOUNT)) AS "INCOME WITH DISCOUNT"
+FROM ORDER_DETAILS
+GROUP BY ORDERID [42000-197]
+2018-10-11 11:54:07 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "UNITPRICE" must be in the GROUP BY list; SQL statement:
+SELECT ORDERID,
+UNITPRICE*QUANTITY AS INCOME,
+UNITPRICE*QUANTITY*(1-DISCOUNT) AS "INCOME WITH DISCOUNT"
+FROM ORDER_DETAILS
+GROUP BY ORDERID [90016-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.updateAggregate(ExpressionColumn.java:172)
+	at org.h2.expression.Operation.updateAggregate(Operation.java:389)
+	at org.h2.expression.Alias.updateAggregate(Alias.java:87)
+	at org.h2.command.dml.Select.queryGroup(Select.java:350)
+	at org.h2.command.dml.Select.queryWithoutCache(Select.java:628)
+	at org.h2.command.dml.Query.queryWithoutCacheLazyCheck(Query.java:114)
+	at org.h2.command.dml.Query.query(Query.java:371)
+	at org.h2.command.dml.Query.query(Query.java:333)
+	at org.h2.command.CommandContainer.query(CommandContainer.java:114)
+	at org.h2.command.Command.executeQuery(Command.java:202)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:227)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:1077)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1386)
+	at org.h2.server.web.WebApp.query(WebApp.java:1060)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1022)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1009)
+	at org.h2.server.web.WebThread.process(WebThread.java:165)
+	at org.h2.server.web.WebThread.run(WebThread.java:90)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+2018-10-11 11:54:36 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT ORDERID,
+                                    
+                                                                
+FROM ORDER_DETAILS
+GROUP[*] BY ORDERID "; expected "., (, USE, AS, RIGHT, LEFT, FULL, INNER, JOIN, CROSS, NATURAL, ,, SELECT"; SQL statement:
+SELECT ORDERID,
+//SUM(UNITPRICE*QUANTITY) AS INCOME,
+//SUM(UNITPRICE*QUANTITY*(1-DISCOUNT)) AS "INCOME WITH DISCOUNT"
+FROM ORDER_DETAILS
+GROUP BY ORDERID [42001-197]
+2018-10-11 11:54:55 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT ORDERID
+SUM([*]UNITPRICE*QUANTITY) AS INCOME,
+SUM(UNITPRICE*QUANTITY*(1-DISCOUNT)) AS ""INCOME WITH DISCOUNT""
+FROM ORDER_DETAILS
+GROUP BY ORDERID"; SQL statement:
+SELECT ORDERID
+SUM(UNITPRICE*QUANTITY) AS INCOME,
+SUM(UNITPRICE*QUANTITY*(1-DISCOUNT)) AS "INCOME WITH DISCOUNT"
+FROM ORDER_DETAILS
+GROUP BY ORDERID [42000-197]
+2018-10-11 11:55:29 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT ORDERID,
+SUM(UNITPRICE*QUANTITY)             
+SUM([*]UNITPRICE*QUANTITY*(1-DISCOUNT))                            
+FROM ORDER_DETAILS
+GROUP BY ORDERID "; SQL statement:
+SELECT ORDERID,
+SUM(UNITPRICE*QUANTITY) //AS INCOME,
+SUM(UNITPRICE*QUANTITY*(1-DISCOUNT)) //AS "INCOME WITH DISCOUNT"
+FROM ORDER_DETAILS
+GROUP BY ORDERID [42000-197]
+2018-10-11 11:56:41 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "ORDERID" must be in the GROUP BY list; SQL statement:
+SELECT ORDERID,
+SUM(UNITPRICE*QUANTITY) /*AS INCOME*/,
+SUM(UNITPRICE*QUANTITY*(1-DISCOUNT)) /*AS "INCOME WITH DISCOUNT"*/
+FROM ORDER_DETAILS
+//GROUP BY ORDERID; [90016-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.updateAggregate(ExpressionColumn.java:172)
+	at org.h2.command.dml.Select.queryGroup(Select.java:350)
+	at org.h2.command.dml.Select.queryWithoutCache(Select.java:628)
+	at org.h2.command.dml.Query.queryWithoutCacheLazyCheck(Query.java:114)
+	at org.h2.command.dml.Query.query(Query.java:371)
+	at org.h2.command.dml.Query.query(Query.java:333)
+	at org.h2.command.CommandContainer.query(CommandContainer.java:114)
+	at org.h2.command.Command.executeQuery(Command.java:202)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:227)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:1077)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1386)
+	at org.h2.server.web.WebApp.query(WebApp.java:1060)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1022)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1009)
+	at org.h2.server.web.WebThread.process(WebThread.java:165)
+	at org.h2.server.web.WebThread.run(WebThread.java:90)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+2018-10-11 12:00:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELCT[*] * FROM ORDER_DETAILS"; expected "SELECT, SET, SAVEPOINT, SCRIPT, SHUTDOWN, SHOW, {"; SQL statement:
+SELCT * FROM ORDER_DETAILS [42001-197]
+2018-10-11 12:03:23 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT *ORDERID[*] , PRODUCTID 
+MAX(UNITPRICE*QUANTITY*(1-DISCOUNT))
+FROM ORDER_DETAILS 
+GROUP BY ORDERID"; SQL statement:
+SELECT *ORDERID , PRODUCTID 
+MAX(UNITPRICE*QUANTITY*(1-DISCOUNT))
+FROM ORDER_DETAILS 
+GROUP BY ORDERID [42000-197]
+2018-10-11 12:03:32 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT * ORDERID[*] , PRODUCTID 
+MAX(UNITPRICE*QUANTITY*(1-DISCOUNT))
+FROM ORDER_DETAILS 
+GROUP BY ORDERID"; SQL statement:
+SELECT * ORDERID , PRODUCTID 
+MAX(UNITPRICE*QUANTITY*(1-DISCOUNT))
+FROM ORDER_DETAILS 
+GROUP BY ORDERID [42000-197]
+2018-10-20 08:37:37 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "UPDATE EMPLOYEES SET TITLEOFCOURTESY  ='Mr.' WHERE FIRSTNAME =[*]'Pupelis;"; SQL statement:
+UPDATE EMPLOYEES SET TITLEOFCOURTESY  ='Mr.' WHERE FIRSTNAME ='Pupelis; [42000-197]
+2018-10-20 08:37:57 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "UPDATE EMPLOYEES SET TITLEOFCOURTESY  ='Mr.'  WHERE FIRSTNAME =[*]'Pupelis;"; SQL statement:
+UPDATE EMPLOYEES SET TITLEOFCOURTESY  ='Mr.'  WHERE FIRSTNAME ='Pupelis; [42000-197]
+2018-10-20 08:38:27 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "UPDATE EMPLOYEES SET TITLEOFCOURTESY  = 'Mr.'  WHERE FIRSTNAME =[*]'Pupelis;"; SQL statement:
+UPDATE EMPLOYEES SET TITLEOFCOURTESY  = 'Mr.'  WHERE FIRSTNAME ='Pupelis; [42000-197]
+2018-10-20 15:39:11 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT LASTNAME , FIRSTNAME  COUNT ([*]*) FROM EMPLOYEES WHERE TITLE ='Sales Representative'"; SQL statement:
+SELECT LASTNAME , FIRSTNAME  COUNT (*) FROM EMPLOYEES WHERE TITLE ='Sales Representative' [42000-197]
+2018-10-20 15:39:37 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "LASTNAME" must be in the GROUP BY list; SQL statement:
+SELECT LASTNAME , FIRSTNAME,  COUNT (*) FROM EMPLOYEES WHERE TITLE ='Sales Representative' [90016-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.updateAggregate(ExpressionColumn.java:172)
+	at org.h2.command.dml.Select.queryGroup(Select.java:350)
+	at org.h2.command.dml.Select.queryWithoutCache(Select.java:628)
+	at org.h2.command.dml.Query.queryWithoutCacheLazyCheck(Query.java:114)
+	at org.h2.command.dml.Query.query(Query.java:371)
+	at org.h2.command.dml.Query.query(Query.java:333)
+	at org.h2.command.CommandContainer.query(CommandContainer.java:114)
+	at org.h2.command.Command.executeQuery(Command.java:202)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:227)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:1077)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1386)
+	at org.h2.server.web.WebApp.query(WebApp.java:1060)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1022)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1009)
+	at org.h2.server.web.WebThread.process(WebThread.java:165)
+	at org.h2.server.web.WebThread.run(WebThread.java:90)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+2018-10-20 15:40:02 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT TITLE,FIRSTNAME   FROM EMPLOYEES WHERE FIRSTNAME ='Andrew'
+SELECT[*] COUNT (*) FROM EMPLOYEES WHERE TITLE ='Sales Representative'"; SQL statement:
+SELECT TITLE,FIRSTNAME   FROM EMPLOYEES WHERE FIRSTNAME ='Andrew'
+SELECT COUNT (*) FROM EMPLOYEES WHERE TITLE ='Sales Representative' [42000-197]
+2018-10-20 15:46:36 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT * MAX[*](BIRTHDATE), MIN(BIRTHDATE) FROM EMPLOYEES"; SQL statement:
+SELECT * MAX(BIRTHDATE), MIN(BIRTHDATE) FROM EMPLOYEES [42000-197]
+2018-10-20 15:46:55 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT * AND[*] MAX(BIRTHDATE), MIN(BIRTHDATE) FROM EMPLOYEES"; SQL statement:
+SELECT * AND MAX(BIRTHDATE), MIN(BIRTHDATE) FROM EMPLOYEES [42000-197]
+2018-10-20 15:48:24 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "FIRSTNAME" must be in the GROUP BY list; SQL statement:
+SELECT FIRSTNAME, MAX(BIRTHDATE), MIN(BIRTHDATE) FROM EMPLOYEES [90016-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.updateAggregate(ExpressionColumn.java:172)
+	at org.h2.command.dml.Select.queryGroup(Select.java:350)
+	at org.h2.command.dml.Select.queryWithoutCache(Select.java:628)
+	at org.h2.command.dml.Query.queryWithoutCacheLazyCheck(Query.java:114)
+	at org.h2.command.dml.Query.query(Query.java:371)
+	at org.h2.command.dml.Query.query(Query.java:333)
+	at org.h2.command.CommandContainer.query(CommandContainer.java:114)
+	at org.h2.command.Command.executeQuery(Command.java:202)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:227)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:1077)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1386)
+	at org.h2.server.web.WebApp.query(WebApp.java:1060)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1022)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1009)
+	at org.h2.server.web.WebThread.process(WebThread.java:165)
+	at org.h2.server.web.WebThread.run(WebThread.java:90)
+	at java.base/java.lang.Thread.run(Thread.java:844)

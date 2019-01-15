@@ -1,0 +1,598 @@
+2018-10-17 10:20:42 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT * A[*].PAVARDE B.PAVARDE 
+FROM VYKDYTOJAI A JOIN VYKDYTOJAI B
+ON A.KVALIFIKACIJA =B.KVALIFIKACIJA 
+WHERE A.NR >B.NR"; SQL statement:
+SELECT * A.PAVARDE B.PAVARDE 
+FROM VYKDYTOJAI A JOIN VYKDYTOJAI B
+ON A.KVALIFIKACIJA =B.KVALIFIKACIJA 
+WHERE A.NR >B.NR [42000-197]
+2018-10-17 10:20:50 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT * A[*].PAVARDE B.PAVARDE 
+FROM VYKDYTOJAI A JOIN VYKDYTOJAI B
+ON A.KVALIFIKACIJA =B.KVALIFIKACIJA 
+WHERE A.NR >B.NR"; SQL statement:
+SELECT * A.PAVARDE B.PAVARDE 
+FROM VYKDYTOJAI A JOIN VYKDYTOJAI B
+ON A.KVALIFIKACIJA =B.KVALIFIKACIJA 
+WHERE A.NR >B.NR [42000-197]
+2018-10-17 10:20:57 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT A.PAVARDE B.[*]PAVARDE 
+FROM VYKDYTOJAI A JOIN VYKDYTOJAI B
+ON A.KVALIFIKACIJA =B.KVALIFIKACIJA 
+WHERE A.NR >B.NR"; SQL statement:
+SELECT A.PAVARDE B.PAVARDE 
+FROM VYKDYTOJAI A JOIN VYKDYTOJAI B
+ON A.KVALIFIKACIJA =B.KVALIFIKACIJA 
+WHERE A.NR >B.NR [42000-197]
+2018-10-17 11:02:16 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO VYKDYTOJAI VARDAS[*] ('Jonas', 'Petras', 'Grazina', 'Ona', 'Antainas')"; expected "., (, DIRECT, SORTED, DEFAULT, VALUES, SET, (, WITH, SELECT, FROM"; SQL statement:
+INSERT INTO VYKDYTOJAI VARDAS ('Jonas', 'Petras', 'Grazina', 'Ona', 'Antainas') [42001-197]
+2018-10-17 11:02:32 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO VYKDYTOJAI VARDAS[*] VALUES ('Jonas', 'Petras', 'Grazina', 'Ona', 'Antainas')"; expected "., (, DIRECT, SORTED, DEFAULT, VALUES, SET, (, WITH, SELECT, FROM"; SQL statement:
+INSERT INTO VYKDYTOJAI VARDAS VALUES ('Jonas', 'Petras', 'Grazina', 'Ona', 'Antainas') [42001-197]
+2018-10-17 11:17:53 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT FROM
+VYKDYTOJAI JOIN VYKDYMAS  
+ON VYKDYTOJAI.NR=VYKDYMAS.VYKDYTOJAS 
+JOIN PROJEKTAI 
+ON PROJEKTAI.NR=VYKDYMAS.PROJEKTAS[*]"; expected "(, ., [, ::, *, /, %, +, -, ||, ~, !~, NOT, LIKE, ILIKE, REGEXP, IS, IN, BETWEEN, AND, OR, RIGHT, LEFT, FULL, INNER, JOIN, CROSS, NATURAL, ,, SELECT"; SQL statement:
+SELECT FROM
+VYKDYTOJAI JOIN VYKDYMAS  
+ON VYKDYTOJAI.NR=VYKDYMAS.VYKDYTOJAS 
+JOIN PROJEKTAI 
+ON PROJEKTAI.NR=VYKDYMAS.PROJEKTAS [42001-197]
+2018-10-17 11:35:59 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT VARDAS, PAVARDE,PROJEKTAI.PAVADINIMAS   FROM
+       VYKDYTOJAI JOIN VYKDYMAS  
+       ON VYKDYTOJAI.NR=VYKDYMAS.VYKDYTOJAS 
+       JOIN PROJEKTAI 
+       ON PROJEKTAI.NR=VYKDYMAS.PROJEKTAS
+WHERE VYKDYTOJAI.KVALIFIKACIJA ='Informatikas' AND
+WHERE[*] PROJEKTAI.PAVADINIMAS ='Studentu apskaita'"; expected "NOT, EXISTS, INTERSECTS, SELECT, FROM, WITH"; SQL statement:
+SELECT VARDAS, PAVARDE,PROJEKTAI.PAVADINIMAS   FROM
+       VYKDYTOJAI JOIN VYKDYMAS  
+       ON VYKDYTOJAI.NR=VYKDYMAS.VYKDYTOJAS 
+       JOIN PROJEKTAI 
+       ON PROJEKTAI.NR=VYKDYMAS.PROJEKTAS
+WHERE VYKDYTOJAI.KVALIFIKACIJA ='Informatikas' AND
+WHERE PROJEKTAI.PAVADINIMAS ='Studentu apskaita' [42001-197]
+2018-10-17 11:36:19 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT * FROM
+       VYKDYTOJAI JOIN VYKDYMAS  
+       ON VYKDYTOJAI.NR=VYKDYMAS.VYKDYTOJAS 
+       JOIN PROJEKTAI 
+       ON PROJEKTAI.NR=VYKDYMAS.PROJEKTAS
+WHERE VYKDYTOJAI.KVALIFIKACIJA ='Informatikas' AND
+WHERE[*] PROJEKTAI.PAVADINIMAS ='Studentu apskaita'"; expected "NOT, EXISTS, INTERSECTS, SELECT, FROM, WITH"; SQL statement:
+SELECT * FROM
+       VYKDYTOJAI JOIN VYKDYMAS  
+       ON VYKDYTOJAI.NR=VYKDYMAS.VYKDYTOJAS 
+       JOIN PROJEKTAI 
+       ON PROJEKTAI.NR=VYKDYMAS.PROJEKTAS
+WHERE VYKDYTOJAI.KVALIFIKACIJA ='Informatikas' AND
+WHERE PROJEKTAI.PAVADINIMAS ='Studentu apskaita' [42001-197]
+2018-10-17 11:36:50 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT * FROM VYKDYTOJAI JOIN VYKDYMAS  
+ON VYKDYTOJAI.NR=VYKDYMAS.VYKDYTOJAS 
+JOIN PROJEKTAI 
+ON PROJEKTAI.NR=VYKDYMAS.PROJEKTAS
+WHERE VYKDYTOJAI.KVALIFIKACIJA ='Informatikas' AND
+WHERE[*] PROJEKTAI.PAVADINIMAS ='Studentu apskaita'"; expected "NOT, EXISTS, INTERSECTS, SELECT, FROM, WITH"; SQL statement:
+SELECT * FROM VYKDYTOJAI JOIN VYKDYMAS  
+ON VYKDYTOJAI.NR=VYKDYMAS.VYKDYTOJAS 
+JOIN PROJEKTAI 
+ON PROJEKTAI.NR=VYKDYMAS.PROJEKTAS
+WHERE VYKDYTOJAI.KVALIFIKACIJA ='Informatikas' AND
+WHERE PROJEKTAI.PAVADINIMAS ='Studentu apskaita' [42001-197]
+2018-10-17 11:42:42 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT VARDAS, PAVARDE,  PROJEKTAI.PAVADINIMAS 
+FROM VYKDYTOJAI JOIN VYKDYMAS  
+ON VYKDYTOJAI.NR=VYKDYMAS.VYKDYTOJAS 
+JOIN PROJEKTAI 
+ON PROJEKTAI.NR=VYKDYMAS.PROJEKTAS
+WHERE VYKDYMAS .STATUSAS  ='Vadovas' AND PROJEKTAI.PAVADINIMAS ='Studentu apskaita'
+AND VYKDYTOJAI.VARDAS ='Ona',[*] 'Grazina'"; SQL statement:
+SELECT VARDAS, PAVARDE,  PROJEKTAI.PAVADINIMAS 
+FROM VYKDYTOJAI JOIN VYKDYMAS  
+ON VYKDYTOJAI.NR=VYKDYMAS.VYKDYTOJAS 
+JOIN PROJEKTAI 
+ON PROJEKTAI.NR=VYKDYMAS.PROJEKTAS
+WHERE VYKDYMAS .STATUSAS  ='Vadovas' AND PROJEKTAI.PAVADINIMAS ='Studentu apskaita'
+AND VYKDYTOJAI.VARDAS ='Ona', 'Grazina' [42000-197]
+2018-10-17 11:42:57 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "Grazina"; SQL statement:
+SELECT VARDAS, PAVARDE,  PROJEKTAI.PAVADINIMAS 
+FROM VYKDYTOJAI JOIN VYKDYMAS  
+ON VYKDYTOJAI.NR=VYKDYMAS.VYKDYTOJAS 
+JOIN PROJEKTAI 
+ON PROJEKTAI.NR=VYKDYMAS.PROJEKTAS
+WHERE VYKDYMAS .STATUSAS  ='Vadovas' AND PROJEKTAI.PAVADINIMAS ='Studentu apskaita'
+AND VYKDYTOJAI.VARDAS ='Ona' OR 'Grazina' [22018-197]
+2018-10-17 11:56:53 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT COUNT (*) PROJEKTAI.[*]PAVADINIMAS 
+FROM VYKDYTOJAI JOIN VYKDYMAS  
+ON VYKDYTOJAI.NR=VYKDYMAS.VYKDYTOJAS 
+JOIN PROJEKTAI 
+ON PROJEKTAI.NR=VYKDYMAS.PROJEKTAS"; SQL statement:
+SELECT COUNT (*) PROJEKTAI.PAVADINIMAS 
+FROM VYKDYTOJAI JOIN VYKDYMAS  
+ON VYKDYTOJAI.NR=VYKDYMAS.VYKDYTOJAS 
+JOIN PROJEKTAI 
+ON PROJEKTAI.NR=VYKDYMAS.PROJEKTAS [42000-197]
+2018-10-17 11:59:19 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT COUNT (PROJEKTAI.PAVADINIMAS)  PROJEKTAI.[*]PAVADINIMAS
+FROM VYKDYTOJAI JOIN VYKDYMAS  
+ON VYKDYTOJAI.NR=VYKDYMAS.VYKDYTOJAS 
+JOIN PROJEKTAI 
+ON PROJEKTAI.NR=VYKDYMAS.PROJEKTAS"; SQL statement:
+SELECT COUNT (PROJEKTAI.PAVADINIMAS)  PROJEKTAI.PAVADINIMAS
+FROM VYKDYTOJAI JOIN VYKDYMAS  
+ON VYKDYTOJAI.NR=VYKDYMAS.VYKDYTOJAS 
+JOIN PROJEKTAI 
+ON PROJEKTAI.NR=VYKDYMAS.PROJEKTAS [42000-197]
+2018-10-17 12:02:25 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT PROJEKTAI.PAVADINIMAS COUNT([*]*)
+FROM VYKDYTOJAI JOIN VYKDYMAS  
+ON VYKDYTOJAI.NR=VYKDYMAS.VYKDYTOJAS 
+JOIN PROJEKTAI 
+ON PROJEKTAI.NR=VYKDYMAS.PROJEKTAS
+GROUP BY PROJEKTAI.PAVADINIMAS"; SQL statement:
+SELECT PROJEKTAI.PAVADINIMAS COUNT(*)
+FROM VYKDYTOJAI JOIN VYKDYMAS  
+ON VYKDYTOJAI.NR=VYKDYMAS.VYKDYTOJAS 
+JOIN PROJEKTAI 
+ON PROJEKTAI.NR=VYKDYMAS.PROJEKTAS
+GROUP BY PROJEKTAI.PAVADINIMAS [42000-197]
+2018-10-17 12:02:42 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT PROJEKTAI.PAVADINIMAS COUNT([*]*)
+FROM VYKDYTOJAI JOIN VYKDYMAS  
+ON VYKDYTOJAI.NR=VYKDYMAS.VYKDYTOJAS 
+JOIN PROJEKTAI 
+ON PROJEKTAI.NR=VYKDYMAS.PROJEKTAS
+GROUP BY PROJEKTAI.PAVADINIMAS"; SQL statement:
+SELECT PROJEKTAI.PAVADINIMAS COUNT(*)
+FROM VYKDYTOJAI JOIN VYKDYMAS  
+ON VYKDYTOJAI.NR=VYKDYMAS.VYKDYTOJAS 
+JOIN PROJEKTAI 
+ON PROJEKTAI.NR=VYKDYMAS.PROJEKTAS
+GROUP BY PROJEKTAI.PAVADINIMAS [42000-197]
+2018-10-17 12:02:43 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT PROJEKTAI.PAVADINIMAS COUNT([*]*)
+FROM VYKDYTOJAI JOIN VYKDYMAS  
+ON VYKDYTOJAI.NR=VYKDYMAS.VYKDYTOJAS 
+JOIN PROJEKTAI 
+ON PROJEKTAI.NR=VYKDYMAS.PROJEKTAS
+GROUP BY PROJEKTAI.PAVADINIMAS"; SQL statement:
+SELECT PROJEKTAI.PAVADINIMAS COUNT(*)
+FROM VYKDYTOJAI JOIN VYKDYMAS  
+ON VYKDYTOJAI.NR=VYKDYMAS.VYKDYTOJAS 
+JOIN PROJEKTAI 
+ON PROJEKTAI.NR=VYKDYMAS.PROJEKTAS
+GROUP BY PROJEKTAI.PAVADINIMAS [42000-197]
+2018-10-17 12:11:24 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Column "Vadovas" not found; SQL statement:
+SELECT VARDAS, PAVARDE, PROJEKTAI.PAVADINIMAS , VYKDYMAS.STATUSAS 
+FROM VYKDYTOJAI JOIN VYKDYMAS  
+ON VYKDYTOJAI.NR=VYKDYMAS.VYKDYTOJAS 
+JOIN PROJEKTAI 
+ON PROJEKTAI.NR=VYKDYMAS.PROJEKTAS
+WHERE VYKDYMAS.STATUSAS <> "Vadovas" [42122-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:150)
+	at org.h2.expression.Comparison.optimize(Comparison.java:179)
+	at org.h2.expression.ConditionAndOr.optimize(ConditionAndOr.java:130)
+	at org.h2.command.dml.Select.prepare(Select.java:861)
+	at org.h2.command.Parser.prepareCommand(Parser.java:283)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.engine.Session.prepareCommand(Session.java:549)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:217)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:1077)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1386)
+	at org.h2.server.web.WebApp.query(WebApp.java:1060)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1022)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1009)
+	at org.h2.server.web.WebThread.process(WebThread.java:165)
+	at org.h2.server.web.WebThread.run(WebThread.java:90)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+2018-10-17 12:11:32 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Column "Vadovas" not found; SQL statement:
+SELECT VARDAS, PAVARDE, PROJEKTAI.PAVADINIMAS , VYKDYMAS.STATUSAS 
+FROM VYKDYTOJAI JOIN VYKDYMAS  
+ON VYKDYTOJAI.NR=VYKDYMAS.VYKDYTOJAS 
+JOIN PROJEKTAI 
+ON PROJEKTAI.NR=VYKDYMAS.PROJEKTAS
+WHERE VYKDYMAS.STATUSAS <> "Vadovas" [42122-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:150)
+	at org.h2.expression.Comparison.optimize(Comparison.java:179)
+	at org.h2.expression.ConditionAndOr.optimize(ConditionAndOr.java:130)
+	at org.h2.command.dml.Select.prepare(Select.java:861)
+	at org.h2.command.Parser.prepareCommand(Parser.java:283)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.engine.Session.prepareCommand(Session.java:549)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:217)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:1077)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1386)
+	at org.h2.server.web.WebApp.query(WebApp.java:1060)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1022)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1009)
+	at org.h2.server.web.WebThread.process(WebThread.java:165)
+	at org.h2.server.web.WebThread.run(WebThread.java:90)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+2018-10-17 12:11:48 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Column "Vadovas" not found; SQL statement:
+SELECT VARDAS, PAVARDE, PROJEKTAI.PAVADINIMAS , VYKDYMAS.STATUSAS 
+FROM VYKDYTOJAI JOIN VYKDYMAS  
+ON VYKDYTOJAI.NR=VYKDYMAS.VYKDYTOJAS 
+JOIN PROJEKTAI 
+ON PROJEKTAI.NR=VYKDYMAS.PROJEKTAS
+WHERE VYKDYMAS.STATUSAS <> "Vadovas" [42122-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:150)
+	at org.h2.expression.Comparison.optimize(Comparison.java:179)
+	at org.h2.expression.ConditionAndOr.optimize(ConditionAndOr.java:130)
+	at org.h2.command.dml.Select.prepare(Select.java:861)
+	at org.h2.command.Parser.prepareCommand(Parser.java:283)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.engine.Session.prepareCommand(Session.java:549)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:217)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:1077)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1386)
+	at org.h2.server.web.WebApp.query(WebApp.java:1060)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1022)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1009)
+	at org.h2.server.web.WebThread.process(WebThread.java:165)
+	at org.h2.server.web.WebThread.run(WebThread.java:90)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+2018-10-17 12:16:06 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO VYKDYTOJAI (PAVARDE ,KVALIFIKACIJA ,KATEGORIJA ,ISSILAVINIMAS ,VARDAS) VALUES ('Logis', NULL, NULL, NULL, [*]""Pranas')"; SQL statement:
+INSERT INTO VYKDYTOJAI (PAVARDE ,KVALIFIKACIJA ,KATEGORIJA ,ISSILAVINIMAS ,VARDAS) VALUES ('Logis', NULL, NULL, NULL, "Pranas') [42000-197]
+2018-10-17 12:16:28 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO VYKDYTOJAI (PAVARDE ,KVALIFIKACIJA ,KATEGORIJA ,ISSILAVINIMAS ,VARDAS) VALUES ('Logis', NULL, NULL, NULL, 'Pranas')[*]'"; SQL statement:
+INSERT INTO VYKDYTOJAI (PAVARDE ,KVALIFIKACIJA ,KATEGORIJA ,ISSILAVINIMAS ,VARDAS) VALUES ('Logis', NULL, NULL, NULL, 'Pranas')' [42000-197]
+2018-10-17 12:24:02 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Column "PROJEKTAS.PAVADINIMAS" not found; SQL statement:
+SELECT VARDAS , PAVARDE, PROJEKTAS.PAVADINIMAS FROM VYKDYTOJAI
+LEFT JOIN VYKDYMAS  
+ON VYKDYTOJAI.NR=VYKDYMAS.VYKDYTOJAS 
+LEFT JOIN PROJEKTAI 
+ON PROJEKTAI.NR=VYKDYMAS.PROJEKTAS [42122-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:150)
+	at org.h2.command.dml.Select.prepare(Select.java:858)
+	at org.h2.command.Parser.prepareCommand(Parser.java:283)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.engine.Session.prepareCommand(Session.java:549)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:217)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:1077)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1386)
+	at org.h2.server.web.WebApp.query(WebApp.java:1060)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1022)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1009)
+	at org.h2.server.web.WebThread.process(WebThread.java:165)
+	at org.h2.server.web.WebThread.run(WebThread.java:90)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+2018-10-17 12:35:10 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT VARDAS , PAVARDE, PROJEKTAI.PAVADINIMAS VYKDYMAS .[*]VALANDOS , TRUKME FROM VYKDYTOJAI
+LEFT JOIN VYKDYMAS  
+ON VYKDYTOJAI.NR=VYKDYMAS.VYKDYTOJAS 
+LEFT JOIN PROJEKTAI 
+ON PROJEKTAI.NR=VYKDYMAS.PROJEKTAS
+WHERE VYKDYMAS .STATUSAS  IN ('Programuotojas', 'Analitikas')
+AND VYKDYMAS.VALANDOS >=250
+AND PROJEKTAI.TRUKME >=10"; SQL statement:
+SELECT VARDAS , PAVARDE, PROJEKTAI.PAVADINIMAS VYKDYMAS .VALANDOS , TRUKME FROM VYKDYTOJAI
+LEFT JOIN VYKDYMAS  
+ON VYKDYTOJAI.NR=VYKDYMAS.VYKDYTOJAS 
+LEFT JOIN PROJEKTAI 
+ON PROJEKTAI.NR=VYKDYMAS.PROJEKTAS
+WHERE VYKDYMAS .STATUSAS  IN ('Programuotojas', 'Analitikas')
+AND VYKDYMAS.VALANDOS >=250
+AND PROJEKTAI.TRUKME >=10 [42000-197]
+2018-10-18 09:09:51 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "NR" must not be nullable; SQL statement:
+ALTER TABLE PROJEKTAI ADD PRIMARY KEY (NR ) [90023-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.mvstore.db.MVTable.addIndex(MVTable.java:503)
+	at org.h2.command.ddl.AlterTableAddConstraint.tryUpdate(AlterTableAddConstraint.java:148)
+	at org.h2.command.ddl.AlterTableAddConstraint.update(AlterTableAddConstraint.java:78)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:102)
+	at org.h2.command.Command.executeUpdate(Command.java:261)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:233)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:1077)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1386)
+	at org.h2.server.web.WebApp.query(WebApp.java:1060)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1022)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1009)
+	at org.h2.server.web.WebThread.process(WebThread.java:165)
+	at org.h2.server.web.WebThread.run(WebThread.java:90)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+2018-10-18 09:12:56 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "NR" must not be nullable; SQL statement:
+ALTER TABLE VYKDYTOJAI ADD PRIMARY KEY (NR) [90023-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.mvstore.db.MVTable.addIndex(MVTable.java:503)
+	at org.h2.command.ddl.AlterTableAddConstraint.tryUpdate(AlterTableAddConstraint.java:148)
+	at org.h2.command.ddl.AlterTableAddConstraint.update(AlterTableAddConstraint.java:78)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:102)
+	at org.h2.command.Command.executeUpdate(Command.java:261)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:233)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:1077)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1386)
+	at org.h2.server.web.WebApp.query(WebApp.java:1060)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1022)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1009)
+	at org.h2.server.web.WebThread.process(WebThread.java:165)
+	at org.h2.server.web.WebThread.run(WebThread.java:90)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+2018-10-18 09:14:59 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Attempt to define a second primary key; SQL statement:
+ALTER TABLE VYKDYTOJAI  ADD PRIMARY KEY (NR ) [90017-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.message.DbException.get(DbException.java:144)
+	at org.h2.command.ddl.AlterTableAddConstraint.tryUpdate(AlterTableAddConstraint.java:125)
+	at org.h2.command.ddl.AlterTableAddConstraint.update(AlterTableAddConstraint.java:78)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:102)
+	at org.h2.command.Command.executeUpdate(Command.java:261)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:233)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:1077)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1386)
+	at org.h2.server.web.WebApp.query(WebApp.java:1060)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1022)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1009)
+	at org.h2.server.web.WebThread.process(WebThread.java:165)
+	at org.h2.server.web.WebThread.run(WebThread.java:90)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+2018-10-20 09:18:12 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Ambiguous column name "KVALIFIKACIJA"; SQL statement:
+SELECT KVALIFIKACIJA, A.PAVARDE, B.PAVARDE FROM VYKDYTOJAI  A JOIN VYKDYTOJAI B ON A.KVALIFIKACIJA =B.KVALIFIKACIJA  WHERE A.NR <> B.NR [90059-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.mapColumn(ExpressionColumn.java:127)
+	at org.h2.expression.ExpressionColumn.mapColumns(ExpressionColumn.java:97)
+	at org.h2.command.dml.Select.mapColumns(Select.java:1237)
+	at org.h2.command.dml.Select.init(Select.java:826)
+	at org.h2.command.Parser.parseSelect(Parser.java:1925)
+	at org.h2.command.Parser.parsePrepared(Parser.java:463)
+	at org.h2.command.Parser.parse(Parser.java:335)
+	at org.h2.command.Parser.parse(Parser.java:307)
+	at org.h2.command.Parser.prepareCommand(Parser.java:278)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.engine.Session.prepareCommand(Session.java:549)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:217)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:1077)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1386)
+	at org.h2.server.web.WebApp.query(WebApp.java:1060)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1022)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1009)
+	at org.h2.server.web.WebThread.process(WebThread.java:165)
+	at org.h2.server.web.WebThread.run(WebThread.java:90)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+2018-10-20 09:34:15 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "ELECT[*] VYKDYTOJAS FROM VYKDYMAS WHERE PROJEKTAS = 1. "; expected "EXPLAIN, EXECUTE, {"; SQL statement:
+ELECT Vykdytojas FROM Vykdymas WHERE Projektas = 1. [42001-197]
+2018-10-20 21:40:57 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT * VYKDYTOJAI[*]"; SQL statement:
+SELECT * VYKDYTOJAI [42000-197]
+2018-10-20 21:48:20 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "UPDATE VYKDYTOJAI SET VARDAS =[*] ‘SAULIUS’ WHERE PAVARDE = ‘JONAITIS’ "; SQL statement:
+UPDATE VYKDYTOJAI SET VARDAS = ‘Saulius’ WHERE PAVARDE = ‘Jonaitis’ [42000-197]
+2018-10-20 21:49:09 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "UPDATE VYKDYTOJAI SET VARDAS = [*]'Saulius’ WHERE PAVARDE = ‘Jonaitis’;"; SQL statement:
+UPDATE VYKDYTOJAI SET VARDAS = 'Saulius’ WHERE PAVARDE = ‘Jonaitis’; [42000-197]
+2018-10-20 21:49:24 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "VARDAS" not found; SQL statement:
+SELECT * FROM VARDAS VYKDYTOJAI [42102-197]
+2018-10-20 21:49:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "VARDAS" not found; SQL statement:
+SELECT * FROM VARDAS VYKDYTOJAI [42102-197]
+2018-10-20 21:50:34 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "UPDATE VYKDYTOJAI SET VARDAS = 'Saulius' WHERE PAVARDE  = [*]'Jonaitis’;"; SQL statement:
+UPDATE VYKDYTOJAI SET VARDAS = 'Saulius' WHERE PAVARDE  = 'Jonaitis’; [42000-197]
+2018-10-20 21:51:03 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "UPDATE VYKDYTOJAI SET VARDAS='Saulius' WHERE PAVARDE=[*]'Jonaitis’;"; SQL statement:
+UPDATE VYKDYTOJAI SET VARDAS='Saulius' WHERE PAVARDE='Jonaitis’; [42000-197]
+2018-10-20 21:59:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT VARDAS, PAVARDE PROJEKTAI.[*]PAVADINIMAS FROM VYKDYTOJAI 
+JOIN VYKDYMAS  ON
+VYKDYTOJAI.NR = VYKDYMAS.VYKDYTOJAS 
+JOIN PROJEKTAI ON
+PROJEKTAI.NR = VYKDYMAS.PROJEKTAS"; SQL statement:
+SELECT VARDAS, PAVARDE PROJEKTAI.PAVADINIMAS FROM VYKDYTOJAI 
+JOIN VYKDYMAS  ON
+VYKDYTOJAI.NR = VYKDYMAS.VYKDYTOJAS 
+JOIN PROJEKTAI ON
+PROJEKTAI.NR = VYKDYMAS.PROJEKTAS [42000-197]
+2018-10-20 22:56:38 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "PROJEKTAI.PAVADINIMAS" must be in the GROUP BY list; SQL statement:
+SELECT PROJEKTAI.PAVADINIMAS, COUNT(VYKDYTOJAI.NR) FROM VYKDYTOJAI 
+JOIN VYKDYMAS  ON
+VYKDYTOJAI.NR = VYKDYMAS.VYKDYTOJAS 
+JOIN PROJEKTAI ON
+PROJEKTAI.NR = VYKDYMAS.PROJEKTAS [90016-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.updateAggregate(ExpressionColumn.java:172)
+	at org.h2.command.dml.Select.queryGroup(Select.java:350)
+	at org.h2.command.dml.Select.queryWithoutCache(Select.java:628)
+	at org.h2.command.dml.Query.queryWithoutCacheLazyCheck(Query.java:114)
+	at org.h2.command.dml.Query.query(Query.java:371)
+	at org.h2.command.dml.Query.query(Query.java:333)
+	at org.h2.command.CommandContainer.query(CommandContainer.java:114)
+	at org.h2.command.Command.executeQuery(Command.java:202)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:227)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:1077)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1386)
+	at org.h2.server.web.WebApp.query(WebApp.java:1060)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1022)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1009)
+	at org.h2.server.web.WebThread.process(WebThread.java:165)
+	at org.h2.server.web.WebThread.run(WebThread.java:90)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+2018-10-20 22:56:59 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT PROJEKTAI.PAVADINIMAS, COUNT(VYKDYTOJAI.NR) FROM VYKDYTOJAI 
+JOIN VYKDYMAS  ON
+VYKDYTOJAI.NR = VYKDYMAS.VYKDYTOJAS 
+JOIN PROJEKTAI ON
+PROJEKTAI.NR = VYKDYMAS.PROJEKTAS
+GROUP BYPROJEKTAI[*].PAVADINIMAS"; expected "BY"; SQL statement:
+SELECT PROJEKTAI.PAVADINIMAS, COUNT(VYKDYTOJAI.NR) FROM VYKDYTOJAI 
+JOIN VYKDYMAS  ON
+VYKDYTOJAI.NR = VYKDYMAS.VYKDYTOJAS 
+JOIN PROJEKTAI ON
+PROJEKTAI.NR = VYKDYMAS.PROJEKTAS
+GROUP BYPROJEKTAI.PAVADINIMAS [42001-197]
+2018-10-20 22:59:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT PROJEKTAI.PAVADINIMAS COUNT([*]VYKDYTOJAI.NR) FROM PROJEKTAI  
+	JOIN VYKDYMAS  ON
+	VYKDYTOJAI.NR = VYKDYMAS.VYKDYTOJAS 
+	JOIN PROJEKTAI ON
+	PROJEKTAI.NR = VYKDYMAS.PROJEKTAS"; SQL statement:
+SELECT PROJEKTAI.PAVADINIMAS COUNT(VYKDYTOJAI.NR) FROM PROJEKTAI  
+	JOIN VYKDYMAS  ON
+	VYKDYTOJAI.NR = VYKDYMAS.VYKDYTOJAS 
+	JOIN PROJEKTAI ON
+	PROJEKTAI.NR = VYKDYMAS.PROJEKTAS [42000-197]
+2018-10-20 22:59:29 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT PROJEKTAI.PAVADINIMAS COUNT([*]VYKDYTOJAI.NR) FROM PROJEKTAI  
+	JOIN VYKDYMAS  ON
+	VYKDYTOJAI.NR = VYKDYMAS.VYKDYTOJAS 
+	JOIN PROJEKTAI ON
+	PROJEKTAI.NR = VYKDYMAS.PROJEKTAS
+GROUP BY PROJEKTAI.PAVADINIMAS"; SQL statement:
+SELECT PROJEKTAI.PAVADINIMAS COUNT(VYKDYTOJAI.NR) FROM PROJEKTAI  
+	JOIN VYKDYMAS  ON
+	VYKDYTOJAI.NR = VYKDYMAS.VYKDYTOJAS 
+	JOIN PROJEKTAI ON
+	PROJEKTAI.NR = VYKDYMAS.PROJEKTAS
+GROUP BY PROJEKTAI.PAVADINIMAS [42000-197]
+2018-10-20 23:00:24 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT PROJEKTAI.PAVADINIMAS COUNT([*]*) FROM PROJEKTAI  
+JOIN VYKDYMAS  ON
+VYKDYTOJAI.NR = VYKDYMAS.VYKDYTOJAS 
+JOIN PROJEKTAI ON
+PROJEKTAI.NR = VYKDYMAS.PROJEKTAS
+GROUP BY PROJEKTAI.PAVADINIMAS"; SQL statement:
+SELECT PROJEKTAI.PAVADINIMAS COUNT(*) FROM PROJEKTAI  
+JOIN VYKDYMAS  ON
+VYKDYTOJAI.NR = VYKDYMAS.VYKDYTOJAS 
+JOIN PROJEKTAI ON
+PROJEKTAI.NR = VYKDYMAS.PROJEKTAS
+GROUP BY PROJEKTAI.PAVADINIMAS [42000-197]
+2018-10-20 23:00:58 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Ambiguous column name "NR"; SQL statement:
+SELECT PROJEKTAI.PAVADINIMAS FROM PROJEKTAI  
+JOIN VYKDYMAS  ON
+VYKDYTOJAI.NR = VYKDYMAS.VYKDYTOJAS 
+JOIN PROJEKTAI ON
+PROJEKTAI.NR = VYKDYMAS.PROJEKTAS
+GROUP BY PROJEKTAI.PAVADINIMAS [90059-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.mapColumn(ExpressionColumn.java:127)
+	at org.h2.expression.ExpressionColumn.mapColumns(ExpressionColumn.java:97)
+	at org.h2.expression.Comparison.mapColumns(Comparison.java:510)
+	at org.h2.table.TableFilter$MapColumnsVisitor.accept(TableFilter.java:1228)
+	at org.h2.table.TableFilter.visit(TableFilter.java:1182)
+	at org.h2.table.TableFilter.addJoin(TableFilter.java:669)
+	at org.h2.command.Parser.addJoin(Parser.java:1857)
+	at org.h2.command.Parser.readJoin(Parser.java:1793)
+	at org.h2.command.Parser.parseJoinTableFilter(Parser.java:2183)
+	at org.h2.command.Parser.parseSelectSimpleFromPart(Parser.java:2139)
+	at org.h2.command.Parser.parseSelectSimple(Parser.java:2287)
+	at org.h2.command.Parser.parseSelectSub(Parser.java:2133)
+	at org.h2.command.Parser.parseSelectUnion(Parser.java:1946)
+	at org.h2.command.Parser.parseSelect(Parser.java:1919)
+	at org.h2.command.Parser.parsePrepared(Parser.java:463)
+	at org.h2.command.Parser.parse(Parser.java:335)
+	at org.h2.command.Parser.parse(Parser.java:307)
+	at org.h2.command.Parser.prepareCommand(Parser.java:278)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.engine.Session.prepareCommand(Session.java:549)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:217)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:1077)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1386)
+	at org.h2.server.web.WebApp.query(WebApp.java:1060)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1022)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1009)
+	at org.h2.server.web.WebThread.process(WebThread.java:165)
+	at org.h2.server.web.WebThread.run(WebThread.java:90)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+2018-10-20 23:02:42 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT PROJEKTAI.PAVADINIMAS COUNT([*]VYKDYTOJAI.NR) FROM PROJEKTAI  
+JOIN VYKDYMAS  ON
+VYKDYTOJAI.NR = VYKDYMAS.VYKDYTOJAS 
+JOIN PROJEKTAI ON
+PROJEKTAI.NR = VYKDYMAS.PROJEKTAS
+GROUP BY PROJEKTAI.PAVADINIMAS"; SQL statement:
+SELECT PROJEKTAI.PAVADINIMAS COUNT(VYKDYTOJAI.NR) FROM PROJEKTAI  
+JOIN VYKDYMAS  ON
+VYKDYTOJAI.NR = VYKDYMAS.VYKDYTOJAS 
+JOIN PROJEKTAI ON
+PROJEKTAI.NR = VYKDYMAS.PROJEKTAS
+GROUP BY PROJEKTAI.PAVADINIMAS [42000-197]
+2018-10-20 23:02:54 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Ambiguous column name "NR"; SQL statement:
+SELECT PROJEKTAI.PAVADINIMAS, COUNT(VYKDYTOJAI.NR) FROM PROJEKTAI  
+JOIN VYKDYMAS  ON
+VYKDYTOJAI.NR = VYKDYMAS.VYKDYTOJAS 
+JOIN PROJEKTAI ON
+PROJEKTAI.NR = VYKDYMAS.PROJEKTAS
+GROUP BY PROJEKTAI.PAVADINIMAS [90059-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.mapColumn(ExpressionColumn.java:127)
+	at org.h2.expression.ExpressionColumn.mapColumns(ExpressionColumn.java:97)
+	at org.h2.expression.Comparison.mapColumns(Comparison.java:510)
+	at org.h2.table.TableFilter$MapColumnsVisitor.accept(TableFilter.java:1228)
+	at org.h2.table.TableFilter.visit(TableFilter.java:1182)
+	at org.h2.table.TableFilter.addJoin(TableFilter.java:669)
+	at org.h2.command.Parser.addJoin(Parser.java:1857)
+	at org.h2.command.Parser.readJoin(Parser.java:1793)
+	at org.h2.command.Parser.parseJoinTableFilter(Parser.java:2183)
+	at org.h2.command.Parser.parseSelectSimpleFromPart(Parser.java:2139)
+	at org.h2.command.Parser.parseSelectSimple(Parser.java:2287)
+	at org.h2.command.Parser.parseSelectSub(Parser.java:2133)
+	at org.h2.command.Parser.parseSelectUnion(Parser.java:1946)
+	at org.h2.command.Parser.parseSelect(Parser.java:1919)
+	at org.h2.command.Parser.parsePrepared(Parser.java:463)
+	at org.h2.command.Parser.parse(Parser.java:335)
+	at org.h2.command.Parser.parse(Parser.java:307)
+	at org.h2.command.Parser.prepareCommand(Parser.java:278)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.engine.Session.prepareCommand(Session.java:549)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:217)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:1077)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1386)
+	at org.h2.server.web.WebApp.query(WebApp.java:1060)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1022)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1009)
+	at org.h2.server.web.WebThread.process(WebThread.java:165)
+	at org.h2.server.web.WebThread.run(WebThread.java:90)
+	at java.base/java.lang.Thread.run(Thread.java:844)
